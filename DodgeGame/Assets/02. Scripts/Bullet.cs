@@ -6,8 +6,10 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 8f; //총알 속도
     private Rigidbody bulletRigidbody; //리지드바디
+    
+    
 
-   void Start()
+    void Start()
     {
         //Bullet의 Rigidbody 컴포넌트 할당
         bulletRigidbody = GetComponent<Rigidbody>();
@@ -17,6 +19,9 @@ public class Bullet : MonoBehaviour
         //3초 뒤에 삭제되게하기
         Destroy(gameObject, 3f);
     }
+
+
+ s
 
     private void OnTriggerEnter(Collider other)
     {
