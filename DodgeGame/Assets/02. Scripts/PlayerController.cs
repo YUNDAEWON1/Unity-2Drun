@@ -58,14 +58,17 @@ public class PlayerController : MonoBehaviour
 
         #endregion
 
+       
+    }
+    //플레이어 사망시 처리할 함수
+    public void Die()
+    {
+       this.gameObject.SetActive(false);
 
+        //씬에 존재하는 GameManager 타입의 오브젝트 찾아서 참조
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        //가져온 GameManager 오브젝트의 EndGame() 메서드 실행
+        gameManager.EndGame();
 
-
-
-        //플레이어 사망시 처리할 함수
-        void Die()
-        {
-            this.gameObject.SetActive(false);
-        }
     }
 }
